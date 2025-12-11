@@ -1,0 +1,39 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: .
+```
+
+---
+
+## **Final Project Structure**
+
+Your project should now look like this:
+```
+github-actions-lab/
+├── .github/
+│   └── workflows/
+│       ├── ci.yml
+│       └── deploy.yml (optional)
+├── .gitignore
+├── Dockerfile
+├── .dockerignore
+├── app.py
+├── test_app.py
+├── requirements.txt
+├── README.md
+├── index.html (optional)
+└── architecture-diagram.png

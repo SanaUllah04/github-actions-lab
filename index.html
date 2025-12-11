@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI/CD Lab Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        h1 { color: #fff; }
+        .status {
+            background: #28a745;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 GitHub Actions CI/CD Lab</h1>
+        <div class="status">
+            ✅ Application Status: Running Successfully!
+        </div>
+        <p>This project demonstrates:</p>
+        <ul>
+            <li>Automated CI/CD with GitHub Actions</li>
+            <li>Python application with pytest</li>
+            <li>Docker containerization</li>
+            <li>Automated deployment</li>
+        </ul>
+        <p><strong>Build Date:</strong> <span id="date"></span></p>
+    </div>
+    <script>
+        document.getElementById('date').textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>
